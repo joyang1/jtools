@@ -75,8 +75,7 @@ public class LRUCache<K, V> {
     }
 
     public void clear(){
-        this.first = null;
-        this.last = null;
+        this.first = this.last = null;
         this.caches = null;
         this.currentCacheSize = 0;
     }
