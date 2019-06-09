@@ -6,3 +6,6 @@ Implements algorithm of LRUCache.
 
 # 2019-05-27
 Using LinkedHashMap to implement algorithm of LRUCache.
+
+# 2019-06-09
+Add Cache. 
