@@ -1,4 +1,4 @@
-package cn.tommyyang.jtools;
+package cn.tommyyang.jtools.lru;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

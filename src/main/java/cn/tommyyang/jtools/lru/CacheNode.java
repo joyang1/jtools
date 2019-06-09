@@ -1,4 +1,4 @@
-package cn.tommyyang.jtools;
+package cn.tommyyang.jtools.lru;
 
 /**
  *
