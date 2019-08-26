@@ -1,13 +1,9 @@
 package cn.tommyyang.jtools.test;
 
-import cn.tommyyang.jtools.*;
+import cn.tommyyang.jtools.lru.LRUCache;
+import cn.tommyyang.jtools.lru.LRUCache1;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
 /**
  *
