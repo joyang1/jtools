@@ -1,4 +1,4 @@
-package cn.tommyyang.jtools.test;
+package cn.tommyyang.jtools.lru;
 
 import cn.tommyyang.jtools.lru.LRUCache;
 import cn.tommyyang.jtools.lru.LRUCache1;
