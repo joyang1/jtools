@@ -33,7 +33,7 @@ public class ImageToolsTest {
                 .setText("https://blog.tommyyang.cn").setX(x).setY(y).build();
 
         ImageWatermark imageWatermark = (ImageWatermark)Watermark.WatermarkBuilder.newBuilder().setType(Watermark.Type.IMAGE).setRotate(-45)
-                .setAlpha(0.6f).setImgPath(markPath).setX(x).setY(y).build();
+                .setAlpha(0.2f).setImgPath(markPath).setX(x).setY(y).build();
 
         ImageTools.addTextMark(imgPath, textWatermark, destPath1);
         ImageTools.addWaterMark(imgPath, imageWatermark, destPath2);
