@@ -1,5 +1,6 @@
-# jtools
-a lot of tools for you to develop java project easily.
+# JTools
+A lot of tools for you to develop java project easily.
+[中文版](README_ZH.md)
 
 # 2019-05-26 
 Implements algorithm of LRUCache.
