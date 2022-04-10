@@ -20,17 +20,12 @@ public class ImageTools {
     private static final float DEFAULT_QUALITY = 0.215f;
 
     /**
-     *
      * 添加水印图片
      *
-     * @param imgPath 待加水印的图片
-     *
+     * @param imgPath  待加水印的图片
      * @param destPath 图片存放路径
-     *
-     * @return  BufferedImage 处理后的图片对象
-     *
+     * @return BufferedImage 处理后的图片对象
      * @throws RuntimeException
-     *
      */
     public static void addWaterMark(String imgPath, ImageWatermark watermark, String destPath) throws RuntimeException {
         BufferedImage bfImage;
@@ -54,14 +49,11 @@ public class ImageTools {
     }
 
     /**
-     *
      * 旋转图片方法一
      *
-     * @param img 目标图片
-     *
+     * @param img    目标图片
      * @param rotate 旋转的角度
-     *
-     * */
+     */
     public static BufferedImage rotateImg(BufferedImage img, double rotate) {
         int width = img.getWidth(null);
         int height = img.getHeight(null);
@@ -70,8 +62,8 @@ public class ImageTools {
         BufferedImage newImage = new BufferedImage(desRect.width, desRect.height, img.getType());
         Graphics2D g = newImage.createGraphics();
         g.translate((desRect.width - width) / 2, (desRect.height - height) / 2);
-        g.rotate(Math.toRadians(rotate), width/2, height/2);
-        g.drawImage(img, null , null);
+        g.rotate(Math.toRadians(rotate), width / 2, height / 2);
+        g.drawImage(img, null, null);
         g.dispose();
 
         return newImage;
@@ -94,11 +86,11 @@ public class ImageTools {
         double r = Math.sqrt(srcRect.width * srcRect.width + srcRect.height * srcRect.height) / 2;
         double len = r * Math.sin(Math.toRadians(angle) / 2) * 2;
         double angle1 = (Math.PI - Math.toRadians(angle)) / 2;
-        double angle2 = Math.atan((double)srcRect.height / srcRect.width);
-        double angle3 = Math.atan((double)srcRect.width / srcRect.height);
+        double angle2 = Math.atan((double) srcRect.height / srcRect.width);
+        double angle3 = Math.atan((double) srcRect.width / srcRect.height);
 
-        int addWidth = (int)(len * Math.cos(Math.PI - angle1 - angle2));
-        int addHeight = (int)(len * Math.cos(Math.PI - angle1 - angle3));
+        int addWidth = (int) (len * Math.cos(Math.PI - angle1 - angle2));
+        int addHeight = (int) (len * Math.cos(Math.PI - angle1 - angle3));
 
         int desWidth = srcRect.width + addWidth * 2;
         int desHeight = srcRect.height + addHeight * 2;
@@ -107,14 +99,11 @@ public class ImageTools {
     }
 
     /**
-     *
      * 旋转图片方法二
      *
-     * @param img 目标图片
-     *
+     * @param img    目标图片
      * @param rotate 旋转的角度
-     *
-     * */
+     */
     public static BufferedImage rotateImg2(BufferedImage img, double rotate) {
         int iw = img.getWidth();// 原始图象的宽度
         int ih = img.getHeight();// 原始图象的高度
@@ -159,18 +148,13 @@ public class ImageTools {
     }
 
     /**
-     *
      * 添加文字水印
      *
-     * @param imgPath 待加水印的图片
-     *
+     * @param imgPath   待加水印的图片
      * @param watermark 水印信息
-     *
-     * @param destPath 图片存放路径
-     *
+     * @param destPath  图片存放路径
      * @throws RuntimeException
-     *
-     * */
+     */
     public static void addTextMark(String imgPath, TextWatermark watermark, String destPath) throws RuntimeException {
         BufferedImage bfImage;
         try {
@@ -179,7 +163,10 @@ public class ImageTools {
             bfImage = new BufferedImage(img.getWidth(null), img.getHeight(null),
                     BufferedImage.TYPE_INT_RGB);
 
+
             Graphics2D g = bfImage.createGraphics();
+            g.setPaint(Color.LIGHT_GRAY);
+            g.fillRect(0, 0, ((BufferedImage) img).getWidth(), ((BufferedImage) img).getHeight());
             g.drawImage(img, 0, 0, null);
             g.setColor(watermark.getColor());
             AffineTransform affineTransform = new AffineTransform();
