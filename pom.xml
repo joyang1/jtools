@@ -31,6 +31,15 @@
             <version>1.7.25</version>
         </dependency>
         <!-- log4j end -->
+
+
+        <!-- http client start -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <!-- http client end -->
     </dependencies>
 
     <build>
