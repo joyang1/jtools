@@ -18,3 +18,6 @@ Using LinkedHashMap to implement algorithm of LRUCache.
 
 # 2022-04-10
 添加时间操作工具类
+
+# 2022-04-17
+添加编码工具类

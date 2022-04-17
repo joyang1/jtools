@@ -1,4 +1,4 @@
-package cn.tommyyang.jtools;
+package cn.tommyyang.jtools.http;
 
 import cn.tommyyang.jtools.http.HttpClientUtils;
 import okhttp3.ResponseBody;
